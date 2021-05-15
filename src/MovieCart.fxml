@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MovieCartController">
+   <children>
+      <SplitPane dividerPositions="0.202" orientation="VERTICAL" prefHeight="700.0" prefWidth="750.0" stylesheets="@movies.css">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="117.0" prefWidth="598.0" style="-fx-background-color: #0080ff;">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff3900" height="43.0" layoutX="14.0" layoutY="14.0" stroke="#f2ff00" strokeType="INSIDE" strokeWidth="4.0" width="206.0" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="255.0" layoutY="88.0" prefHeight="43.0" prefWidth="279.0" text="PRESS CHECKOUT" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="43.0" prefWidth="206.0" text="MOVIE RENTAL" textFill="#f2ff00">
+                     <font>
+                        <Font name="Segoe UI Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnGoBack" layoutX="14.0" layoutY="88.0" mnemonicParsing="false" onAction="#navigateToMovieDetails" prefHeight="35.0" prefWidth="80.0" style="-fx-background-color: #ff3700;" text="Go Back" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="430.0" prefWidth="718.0" style="-fx-background-color: #1d2740;">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff3700" height="98.0" layoutY="460.0" stroke="#ff3700" strokeType="INSIDE" width="750.0" />
+                  <Button fx:id="btnCheckout" layoutX="568.0" layoutY="105.0" mnemonicParsing="false" onAction="#navigateToPayment" prefHeight="50.0" prefWidth="136.0" style="-fx-background-color: #00ff00;" text="Checkout" textFill="#fffefe">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font></Button>
+                  <AnchorPane layoutX="14.0" layoutY="105.0">
+                     <children>
+                        <AnchorPane fx:id="anchorPaneMovieDetails" style="-fx-background-color: #0080ff;">
+                           <children>
+                              <Button fx:id="btnRemoveFromCart" layoutX="404.0" layoutY="17.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: #ff3700;" text="Remove From Cart" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="11.0" />
+                                 </font>
+                              </Button>
+                              <AnchorPane>
+                                 <children>
+                                    <Label fx:id="lblMovieTitle" layoutX="59.0" layoutY="24.0" prefHeight="17.0" prefWidth="130.0" text="Movie Title" textFill="#fcf8f8">
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fx:id="imgViewMovieCover" fitHeight="68.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/my_image.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                           <padding>
+                              <Insets right="10.0" />
+                           </padding>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="77.0" prefHeight="26.0" prefWidth="111.0" text="Movie Title" textFill="#fffefe">
+                     <font>
+                        <Font name="Berlin Sans FB" size="23.0" />
+                     </font></Label>
+                  <Label alignment="CENTER" layoutX="213.0" layoutY="77.0" prefHeight="26.0" prefWidth="170.0" text="Total" textFill="#e8e5e5">
+                     <font>
+                        <Font name="Berlin Sans FB" size="23.0" />
+                     </font></Label>
+                  <AnchorPane layoutX="37.0" layoutY="378.0">
+                     <children>
+                        <Button fx:id="btnAddMovie" layoutX="334.0" layoutY="4.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="180.0" style="-fx-background-color: #ccff00;" text="Add Another Movie" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="anchorPaneCartDetails" alignment="CENTER" layoutX="173.0" prefHeight="26.0" prefWidth="130.0" text="£22.3" textFill="WHITE">
+                           <font>
+                              <Font name="Berlin Sans FB" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutY="2.0" prefHeight="17.0" prefWidth="82.0" text="1 Item in Cart" textFill="WHITE">
+                           <font>
+                              <Font name="Berlin Sans FB" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="anchorPaneMovieDetails1" layoutX="14.0" layoutY="200.0" style="-fx-background-color: #0080ff;">
+                     <children>
+                        <Button fx:id="btnRemoveFromCart1" layoutX="404.0" layoutY="17.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: #ff3700;" text="Remove From Cart" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Button>
+                        <AnchorPane>
+                           <children>
+                              <Label fx:id="lblMovieTitle1" layoutX="59.0" layoutY="24.0" prefHeight="17.0" prefWidth="130.0" text="Movie Title" textFill="#fcf8f8">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="14.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fx:id="imgViewMovieCover1" fitHeight="68.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/my_image.jpg" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                  </AnchorPane>
+                  <AnchorPane fx:id="anchorPaneMovieDetails11" layoutX="14.0" layoutY="295.0" style="-fx-background-color: #0080ff;">
+                     <children>
+                        <Button fx:id="btnRemoveFromCart11" layoutX="404.0" layoutY="17.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: #ff3700;" text="Remove From Cart" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Button>
+                        <AnchorPane>
+                           <children>
+                              <Label fx:id="lblMovieTitle11" layoutX="59.0" layoutY="24.0" prefHeight="17.0" prefWidth="130.0" text="Movie Title" textFill="#fcf8f8">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="14.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fx:id="imgViewMovieCover11" fitHeight="68.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/my_image.jpg" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

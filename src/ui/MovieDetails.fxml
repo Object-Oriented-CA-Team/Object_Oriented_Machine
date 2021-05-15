@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="750.0" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MovieDetailsController">
+   <children>
+      <SplitPane dividerPositions="0.2289156626506024" orientation="VERTICAL" prefHeight="700.0" prefWidth="750.0" stylesheets="@movies.css">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="117.0" prefWidth="598.0" style="-fx-background-color: #0080ff;">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="198.0" layoutY="70.0" prefHeight="73.0" prefWidth="371.0" text="MOVIE DETAILS" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Bold" size="28.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnGoBack" layoutX="14.0" layoutY="89.0" mnemonicParsing="false" onAction="#navigateToMovieList" prefHeight="35.0" prefWidth="80.0" styleClass="red-button" text="Go Back" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="RED" height="43.0" layoutX="14.0" layoutY="20.0" stroke="#f2ff00" strokeType="INSIDE" strokeWidth="4.0" width="168.0" />
+                  <Label alignment="CENTER" layoutX="14.0" layoutY="20.0" prefHeight="43.0" prefWidth="168.0" text="MOVIE RENTAL" textFill="#f2ff00">
+                     <font>
+                        <Font name="Segoe UI Bold" size="21.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="430.0" prefWidth="718.0" style="-fx-background-color: #1d2740;">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff3700" height="98.0" layoutY="437.0" stroke="#ff3700" strokeType="INSIDE" width="750.0" />
+                  <Button fx:id="btnRent" layoutX="48.0" layoutY="264.0" mnemonicParsing="false" onAction="#navigateToMovieCart" prefHeight="50.0" prefWidth="161.0" styleClass="green-button" text="Rent" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="28.0" />
+                     </font></Button>
+                  <Label alignment="CENTER" layoutX="246.0" layoutY="224.0" prefHeight="26.0" prefWidth="130.0" text="Rating" textFill="WHITE">
+                     <font>
+                        <Font name="Bookshelf Symbol 7" size="21.0" />
+                     </font></Label>
+                  <Label alignment="CENTER" layoutX="408.0" layoutY="224.0" prefHeight="26.0" prefWidth="130.0" text="Rental Fee" textFill="#fffefe">
+                     <font>
+                        <Font name="Bookshelf Symbol 7" size="21.0" />
+                     </font></Label>
+                  <Label alignment="CENTER" layoutX="554.0" layoutY="224.0" prefHeight="26.0" prefWidth="130.0" text="Actors" textFill="WHITE">
+                     <font>
+                        <Font name="Bookshelf Symbol 7" size="21.0" />
+                     </font></Label>
+                  <Label alignment="CENTER" layoutX="408.0" layoutY="289.0" prefHeight="26.0" prefWidth="130.0" text="Director" textFill="WHITE">
+                     <font>
+                        <Font name="Bookshelf Symbol 7" size="21.0" />
+                     </font></Label>
+                  <Label alignment="CENTER" layoutX="246.0" layoutY="289.0" prefHeight="26.0" prefWidth="130.0" text="Release Date" textFill="WHITE">
+                     <font>
+                        <Font name="Bookshelf Symbol 7" size="21.0" />
+                     </font></Label>
+                  <Label alignment="CENTER" layoutX="245.0" layoutY="354.0" prefHeight="26.0" prefWidth="130.0" text="Length" textFill="WHITE">
+                     <font>
+                        <Font name="Bookshelf Symbol 7" size="22.0" />
+                     </font></Label>
+                  <ImageView fx:id="imgViewCover" fitHeight="240.0" fitWidth="161.0" layoutX="48.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" />
+                  <Text fx:id="txtRating" fill="#616161" fontSmoothingType="LCD" layoutX="299.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2.0">
+                     <font>
+                        <Font name="Bookshelf Symbol 7" size="16.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="txtRentalFee" fill="#616161" fontSmoothingType="LCD" layoutX="455.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="£200">
+                     <font>
+                        <Font name="Bookshelf Symbol 7" size="16.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="txtReleaseDate" fill="#616161" fontSmoothingType="LCD" layoutX="269.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2020-07-07">
+                     <font>
+                        <Font name="Bookshelf Symbol 7" size="16.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="txtLength" fill="#616161" fontSmoothingType="LCD" layoutX="280.0" layoutY="407.0" strokeType="OUTSIDE" strokeWidth="0.0" text="102 min">
+                     <font>
+                        <Font name="Bookshelf Symbol 7" size="16.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="txtDirector" fill="#616161" fontSmoothingType="LCD" layoutX="402.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thomas Jefferson" textAlignment="CENTER" wrappingWidth="140.8125">
+                     <font>
+                        <Font name="Bookshelf Symbol 7" size="16.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="txtActors" fill="#616161" fontSmoothingType="LCD" layoutX="565.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thomas Jefferson Hey There Thomas Hey Boy Where are you? Five Six Seven Eight Nine Ten Eleven Twelve Thirteen Fourteen" wrappingWidth="140.8125">
+                     <font>
+                        <Font name="Bookshelf Symbol 7" size="16.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="txtDescription" fill="WHITE" layoutX="240.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A psychiatrist, whose client commits suicide, finds his family life disrupted after introducing her surviving brother to his wife and daughter." wrappingWidth="480.0">
+                     <font>
+                        <Font name="Bodoni MT" size="23.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="txtTitle" fill="WHITE" layoutX="240.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Every Breath You Take in the New World" wrappingWidth="488.13671875">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="29.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

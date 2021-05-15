@@ -1,0 +1,64 @@
+.green-button {
+    -fx-base:   #00ff00;
+}
+.yellow-button {
+    -fx-base:  #ccff00;
+}
+
+.red-button {
+    -fx-base:  #ff3700;
+}
+
+#btnClear {
+    -fx-base:  red;
+}
+
+.blue-button {
+    -fx-base:  #0080ff;
+}
+
+#movieListPane {
+    -fx-background-color:  #1d2740;
+}
+
+#tvMovieCart {
+    -fx-background-color:  #1d2740;
+    -fx-text-fill: whitesmoke;
+}
+
+.table-view {
+    -fx-background-color:  #1d2740;
+    -fx-text-alignment: right;
+}
+
+
+.table-row-cell {
+    -fx-background-color:  #1d2740;
+    -fx-font-weight:bold;
+    -fx-text-fill: whitesmoke;
+}
+
+
+
+.table-row-cell{
+    -fx-background-color:  #1d2740;
+    -fx-text-fill: whitesmoke;
+}
+
+.table-column {
+    -fx-background-color:  #1d2740;
+     -fx-text-fill: whitesmoke;
+     
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 20;
+}
+
+.table-cell {
+    -fx-alignment: top-center;
+    -fx-font-size: 16;
+
+}
